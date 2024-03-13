@@ -1,0 +1,43 @@
+.base {
+    @apply rounded-lg text-center font-medium transition duration-300 ease-in-out;
+}
+
+.extraSmall {
+    @apply px-3 py-2 text-xs;
+}
+
+.small {
+    @apply px-3 py-2 text-sm;
+}
+
+.medium {
+    @apply px-5 py-2.5 text-sm;
+}
+
+.large {
+    @apply px-5 py-3 text-base;
+}
+
+.extraLarge {
+    @apply px-6 py-3.5 text-base;
+}
+
+.text:hover {
+    @apply bg-[#a6adbb33];
+}
+
+.primary {
+    @apply bg-[#BFAFF2] text-black;
+}
+
+.primary:hover {
+    @apply bg-[#BFAFF290];
+}
+
+.secondary {
+    @apply w-56 bg-[#F8D57E] text-[#333333];
+}
+
+.secondary:hover {
+    @apply bg-[#F8D57E90];
+}

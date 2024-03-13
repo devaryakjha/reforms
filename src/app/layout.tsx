@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import Toast from "@/components/Toaster";
+import NavBar from "@/components/NavBar";
 
 const inter = DM_Sans({ subsets: ["latin"] });
 
@@ -21,7 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Toast>{children}</Toast>
+        <Toast>
+          <NavBar />
+          {children}
+        </Toast>
       </body>
     </html>
   );

@@ -1,0 +1,15 @@
+.nav {
+    @apply flex h-[100px] items-center justify-between px-[50px];
+}
+
+.nav > a {
+    @apply flex items-center justify-center p-4 text-white;
+}
+
+.auth_container {
+    @apply flex items-center gap-4;
+}
+
+.login {
+    @apply w-32;
+}
