@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className={styles.hero}>
+    <div className={styles.hero}>
       <div className={styles.content}>
         <h1 className={styles.title}>
           Reforms: Elevate Your Data Collection with Elegance and Efficiency
@@ -21,6 +21,6 @@ export default function Hero() {
           </Button>
         </Link>
       </div>
-    </section>
+    </div>
   );
 }

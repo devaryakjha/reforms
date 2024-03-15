@@ -2,17 +2,10 @@
 
 import { ArrowRightStartOnRectangleIcon } from "@heroicons/react/20/solid";
 
-type DropdownHeroIcon = React.ForwardRefExoticComponent<
-  React.PropsWithoutRef<React.SVGProps<SVGSVGElement>> & {
-    title?: string;
-    titleId?: string;
-  } & React.RefAttributes<SVGSVGElement>
->;
-
 type DropdownType = "link" | "button";
 
 interface DropdownOption<T extends DropdownType = "link"> {
-  icon?: DropdownHeroIcon;
+  icon?: HeroIconComponent;
   title: string;
   type: T;
   url: T extends "link" ? string : never;

@@ -1,0 +1,23 @@
+.features {
+    @apply mx-auto flex min-h-[150px] max-w-7xl items-start justify-evenly gap-8;
+}
+
+.feature {
+    @apply flex flex-col items-center justify-start;
+}
+
+.icon {
+    @apply mb-12 h-[56px] w-[56px];
+}
+
+.heading {
+    @apply mt-0 text-[18px];
+}
+
+.list {
+    @apply list-none pl-0;
+}
+
+.item {
+    @apply pl-0 text-center text-base mix-blend-difference;
+}
