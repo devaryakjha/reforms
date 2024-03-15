@@ -3,5 +3,11 @@
 @tailwind utilities;
 
 body {
-    @apply bg-dark typography typography-invert max-w-none;
+    @apply bg-dark max-w-none;
+}
+
+@layer utilities {
+    .typography-base {
+        @apply typography typography-invert max-w-none;
+    }
 }

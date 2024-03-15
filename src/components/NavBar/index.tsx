@@ -4,6 +4,7 @@ import Image from "next/image";
 import Button from "@/ui/Button";
 import Userdropdown from "./UserDropDown";
 import type { Claims } from "@auth0/nextjs-auth0";
+import clsx from "clsx";
 
 interface NavBarProps {
   isSignedIn: boolean;
@@ -12,7 +13,7 @@ interface NavBarProps {
 
 export default function NavBar(props: NavBarProps) {
   return (
-    <nav className={styles.nav}>
+    <nav className={clsx(styles.nav, "typography-base")}>
       <Link href="/" className="not-typography">
         <Image
           width={90}
