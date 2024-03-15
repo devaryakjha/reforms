@@ -27,10 +27,10 @@ export default function NavBar(props: NavBarProps) {
         {props.isSignedIn && <Userdropdown claims={props.claims} />}
         {!props.isSignedIn && (
           <>
-            <Link href="/api/auth/signup">
+            <Link href="/api/auth/signup" prefetch={false}>
               <Button size="lg">Sign up</Button>
             </Link>
-            <Link href="/api/auth/login">
+            <Link href="/api/auth/login" prefetch={false}>
               <Button size="lg" variant="primary" className={styles.login}>
                 Log in
               </Button>

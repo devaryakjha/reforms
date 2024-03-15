@@ -7,7 +7,8 @@
     "dev:turbo": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "preview": "next build && next start"
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^3.5.0",
