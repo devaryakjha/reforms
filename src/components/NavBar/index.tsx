@@ -13,7 +13,7 @@ interface NavBarProps {
 export default function NavBar(props: NavBarProps) {
   return (
     <nav className={styles.nav}>
-      <Link href="/">
+      <Link href="/" className="not-typography">
         <Image
           width={90}
           height={36}
