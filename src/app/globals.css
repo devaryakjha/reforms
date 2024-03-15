@@ -3,10 +3,11 @@
 @tailwind utilities;
 
 body {
-    color: rgb(var(--foreground-rgb));
-    background-image: url("/assets/bg_web.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    color: white;
+    @apply bg-dark max-w-none;
+}
+
+@layer utilities {
+    .typography-base {
+        @apply typography typography-invert max-w-none;
+    }
 }

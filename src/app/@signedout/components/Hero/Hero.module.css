@@ -1,0 +1,15 @@
+.hero {
+    @apply relative mx-auto h-[600px] max-w-2xl;
+}
+
+.content {
+    @apply absolute inset-0 flex flex-col items-center justify-center gap-6 text-center;
+}
+
+.title {
+    @apply mb-0 leading-normal;
+}
+
+.description {
+    @apply leading-relaxed;
+}

@@ -3,7 +3,7 @@
 import { sql } from "@vercel/postgres";
 import { NeonDbError } from "@neondatabase/serverless";
 
-export default async function registerEmailforNotifying(formData: FormData) {
+export default async function submitEmail(formData: FormData) {
   const email = formData.get("email");
 
   if (
