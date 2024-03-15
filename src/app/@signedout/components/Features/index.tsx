@@ -2,6 +2,7 @@ import styles from "./Features.module.css";
 import SwatchIcon from "@heroicons/react/20/solid/SwatchIcon";
 import LinkIcon from "@heroicons/react/20/solid/LinkIcon";
 import ChartPieIcon from "@heroicons/react/20/solid/ChartPieIcon";
+import clsx from "clsx";
 
 interface Feature {
   color?: string;
@@ -11,7 +12,7 @@ interface Feature {
 }
 const features: Feature[] = [
   {
-    color: "#9cafb7",
+    color: "#000000",
     icon: SwatchIcon,
     title: "Intuitive Design",
     description: [
@@ -21,7 +22,7 @@ const features: Feature[] = [
     ],
   },
   {
-    color: "#9cafb7",
+    color: "#000000",
     icon: LinkIcon,
     title: "Effortless Integration",
     description: [
@@ -31,7 +32,7 @@ const features: Feature[] = [
     ],
   },
   {
-    color: "#9cafb7",
+    color: "#000000",
     icon: ChartPieIcon,
     title: "Insightful Analytics",
     description: [
@@ -46,7 +47,10 @@ export default function Features() {
   return (
     <div className={styles.features}>
       {features.map((feature) => (
-        <div key={feature.title} className={styles.feature}>
+        <div
+          key={feature.title}
+          className={clsx(styles.feature, "motion-safe:animate-in")}
+        >
           <feature.icon className={styles.icon} color={feature.color} />
           <h3 className={styles.heading}>{feature.title}</h3>
           <ul className={styles.list}>

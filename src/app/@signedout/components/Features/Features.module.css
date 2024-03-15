@@ -1,9 +1,23 @@
 .features {
-    @apply mx-auto flex min-h-[150px] max-w-7xl items-start justify-evenly gap-8;
+    @apply typography mx-auto flex min-h-[150px] max-w-7xl items-start justify-evenly gap-8 rounded-3xl bg-[#FBE4AB] py-16;
 }
 
 .feature {
     @apply flex flex-col items-center justify-start;
+    @apply motion-safe:fade-in motion-safe:zoom-in-50 motion-safe:fill-mode-backwards motion-safe:duration-300;
+}
+
+/* select first element which has feature classname */
+.feature:nth-of-type(1) {
+    @apply delay-0;
+}
+
+.feature:nth-of-type(2) {
+    @apply delay-500;
+}
+
+.feature:nth-of-type(3) {
+    @apply delay-1000;
 }
 
 .icon {
@@ -11,7 +25,7 @@
 }
 
 .heading {
-    @apply mt-0 text-[18px];
+    @apply mt-0;
 }
 
 .list {
@@ -19,5 +33,5 @@
 }
 
 .item {
-    @apply pl-0 text-center text-base mix-blend-difference;
+    @apply pl-0 text-center text-base;
 }

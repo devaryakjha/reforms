@@ -11,6 +11,7 @@ const config: Config = {
     extend: { colors: { dark: "#2b2b2b" } },
   },
   plugins: [
+    require("tailwindcss-animate"),
     require("@tailwindcss/typography")({ className: "typography" }),
     require("@tailwindcss/container-queries"),
     require("@headlessui/tailwindcss"),
