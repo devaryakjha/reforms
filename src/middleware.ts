@@ -37,7 +37,7 @@ export function middleware(_: NextRequest) {
       upgrade-insecure-requests;
   `;
 
-  const requestHeaders = new Headers();
+  const requestHeaders = new Headers(_.headers);
 
   // Setting request headers
   requestHeaders.set("x-nonce", nonce);
