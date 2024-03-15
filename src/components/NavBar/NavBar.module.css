@@ -1,7 +1,11 @@
 .nav {
-    @apply flex h-[100px] items-center justify-between px-[50px];
+    @apply bg-dark z-10 flex h-[100px] items-center justify-between px-[50px];
     /* Make navbar sticky */
-    @apply sticky top-0;
+    @apply sticky top-0 transition-shadow duration-300;
+}
+
+.navscrolled {
+    @apply drop-shadow-lg;
 }
 
 .nav > a {

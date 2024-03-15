@@ -3,6 +3,7 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import Toast from "@/components/Toaster";
 import NavBar from "@/components/NavBar";
+import ScrollWatcher from "@/components/NavBar/ScrollWatcher";
 import { getSession } from "@auth0/nextjs-auth0";
 
 const inter = DM_Sans({ subsets: ["latin"] });
@@ -30,6 +31,7 @@ export default async function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Toast key="GlobalToast">
+          <ScrollWatcher />
           <NavBar
             isSignedIn={isSignedIn}
             key="GloablNavbar"
