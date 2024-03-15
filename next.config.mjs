@@ -8,15 +8,6 @@ const nextConfig = {
       },
     ],
   },
-  redirects: async () => {
-    return [
-      {
-        source: "/",
-        destination: "/about",
-        permanent: true,
-      },
-    ];
-  },
   experimental: {
     optimizeCss: true,
   },
