@@ -1,0 +1,39 @@
+.menu {
+    @apply relative inline-block text-left;
+}
+
+.menuitems {
+    @apply absolute right-0 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none;
+}
+
+.menusection {
+    @apply p-1;
+}
+
+.button {
+    @apply inline-flex justify-center rounded-full;
+}
+
+.enter {
+    @apply transition duration-100 ease-out;
+}
+
+.enterFrom {
+    @apply scale-95 transform opacity-0;
+}
+
+.enterTo {
+    @apply scale-100 transform opacity-100;
+}
+
+.leave {
+    @apply transition duration-75 ease-in;
+}
+
+.leaveFrom {
+    @apply scale-100 transform opacity-100;
+}
+
+.leaveTo {
+    @apply scale-95 transform opacity-0;
+}

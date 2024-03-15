@@ -26,7 +26,7 @@ export default function NavBar(props: NavBarProps) {
         {props.isSignedIn && <Userdropdown claims={props.claims} />}
         {!props.isSignedIn && (
           <>
-            <Link href="/api/auth/login">
+            <Link href="/api/auth/signup">
               <Button size="lg">Sign up</Button>
             </Link>
             <Link href="/api/auth/login">

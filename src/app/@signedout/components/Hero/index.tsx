@@ -15,7 +15,7 @@ export default function Hero() {
           forms, surveys, and quizzes that are easy to use and look great on any
           device.
         </p>
-        <Link href="/api/auth/login">
+        <Link href="/api/auth/signup">
           <Button variant="secondary" size="xl" className={styles.cta}>
             Get Started
           </Button>

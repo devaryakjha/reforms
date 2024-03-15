@@ -18,15 +18,17 @@ interface DropdownOption<T extends DropdownType = "link"> {
   url: T extends "link" ? string : never;
 }
 
-type DropdownOptionLink = DropdownOption<"link">;
-type DropdownOptionButton = DropdownOption<"button">;
+export type DropdownOptionLink = DropdownOption<"link">;
+export type DropdownOptionButton = DropdownOption<"button">;
 
 interface DropdownSection {
   id: string;
   items: Array<DropdownOptionLink | DropdownOptionButton>;
 }
 
-const dropdownoptions: Array<DropdownSection> = [
+export type DropdownOptions = Array<DropdownSection>;
+
+const dropdownoptions: DropdownOptions = [
   {
     id: "profile",
     items: [
