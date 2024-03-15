@@ -12,3 +12,5 @@ export const GET = handleAuth({
   login: handleLogin({ returnTo: "/dashboard" }),
   logout: handleLogout({ returnTo: "/about" }),
 });
+
+export const runtime = "edge";
