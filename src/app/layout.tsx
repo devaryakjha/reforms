@@ -5,6 +5,7 @@ import Toast from "@/components/Toaster";
 import NavBar from "@/components/NavBar";
 import ScrollWatcher from "@/components/NavBar/ScrollWatcher";
 import { getSession } from "@auth0/nextjs-auth0";
+import Footer from "@/components/Footer";
 
 const inter = DM_Sans({ subsets: ["latin"] });
 
@@ -39,6 +40,7 @@ export default async function RootLayout({
           />
           {children}
           {isSignedIn ? signedin : signedout}
+          <Footer />
         </Toast>
       </body>
     </html>

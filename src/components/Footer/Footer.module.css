@@ -1,0 +1,31 @@
+.footer {
+    @apply typography-base pt-0;
+}
+
+.footer > hr {
+    @apply mx-16 my-0;
+}
+
+.content {
+    @apply flex h-[210px] justify-between p-[50px];
+}
+
+.LHS {
+    @apply flex basis-3/5 flex-col justify-between;
+}
+
+.links {
+    @apply flex gap-8 text-[18px] text-white;
+}
+
+.links > a {
+    @apply no-underline;
+}
+
+.RHS {
+    @apply flex flex-1 items-end justify-end gap-4;
+}
+
+.RHS > button {
+    @apply w-48;
+}

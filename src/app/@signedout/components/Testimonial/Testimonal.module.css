@@ -1,0 +1,16 @@
+.testimonials {
+    @apply typography-base h-[520px] py-10;
+}
+
+.content {
+    @apply mx-auto h-full max-w-7xl rounded-2xl bg-[#BFAFF2];
+    @apply flex flex-col items-center justify-center gap-16;
+}
+
+.testimonial {
+    @apply max-w-4xl text-center text-[18px] text-[#2B2B2B];
+}
+
+.author {
+    @apply text-[18px] text-[#2B2B2B];
+}
