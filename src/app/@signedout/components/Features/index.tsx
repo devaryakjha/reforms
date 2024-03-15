@@ -52,7 +52,7 @@ export default function Features() {
           className={clsx(styles.feature, "motion-safe:animate-in")}
         >
           <feature.icon className={styles.icon} color={feature.color} />
-          <h3 className={styles.heading}>{feature.title}</h3>
+          <h2 className={styles.heading}>{feature.title}</h2>
           <ul className={styles.list}>
             {feature.description.map((description, index) => (
               <li key={index} className={styles.item}>
