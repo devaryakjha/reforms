@@ -4,6 +4,7 @@ interface AvatarProps {
   url: string;
   size?: "s" | "m" | "l" | "xl";
   className?: string;
+  priority?: boolean;
 }
 
 export default function Avatar(props: AvatarProps) {
@@ -20,6 +21,7 @@ export default function Avatar(props: AvatarProps) {
       height={size.height}
       alt="Avatar"
       className={props.className}
+      priority={props.priority}
     />
   );
 }
