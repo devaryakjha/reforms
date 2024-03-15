@@ -1,5 +1,6 @@
 import Button from "@/ui/Button";
 import styles from "./Hero.module.css";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -14,9 +15,11 @@ export default function Hero() {
           forms, surveys, and quizzes that are easy to use and look great on any
           device.
         </p>
-        <Button variant="secondary" size="xl" className={styles.cta}>
-          Get Started
-        </Button>
+        <Link href="/api/auth/login?returnTo=/home">
+          <Button variant="secondary" size="xl" className={styles.cta}>
+            Get Started
+          </Button>
+        </Link>
       </div>
     </section>
   );

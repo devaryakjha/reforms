@@ -1,5 +1,5 @@
 .base {
-    @apply rounded-lg text-center font-medium transition duration-300 ease-in-out;
+    @apply rounded-lg text-center font-medium transition duration-300 ease-in-out active:scale-95;
 }
 
 .extraSmall {
@@ -27,17 +27,9 @@
 }
 
 .primary {
-    @apply bg-[#BFAFF2] text-black;
-}
-
-.primary:hover {
-    @apply bg-[#BFAFF290];
+    @apply bg-[#BFAFF2] text-black hover:bg-[#BFAFF290];
 }
 
 .secondary {
-    @apply w-56 bg-[#F8D57E] text-[#333333];
-}
-
-.secondary:hover {
-    @apply bg-[#F8D57E90];
+    @apply w-56 bg-[#F8D57E] text-[#333333] hover:bg-[#F8D57E90];
 }

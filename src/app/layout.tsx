@@ -3,6 +3,7 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import Toast from "@/components/Toaster";
 import NavBar from "@/components/NavBar";
+import { getSession } from "@auth0/nextjs-auth0";
 
 const inter = DM_Sans({ subsets: ["latin"] });
 
@@ -14,17 +15,28 @@ export const metadata: Metadata = {
     "data collection, forms, surveys, questionnaires, polls, quizzes, data analysis, data insights, data visualization, data reporting, data management, data security, data privacy, data compliance, data governance, data integration, data migration, data transformation, data enrichment, data validation, data cleaning, data deduplication, data normalization, data standardization",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  signedout,
+  signedin,
 }: Readonly<{
   children: React.ReactNode;
+  signedout: React.ReactNode;
+  signedin: React.ReactNode;
 }>) {
+  const session = await getSession();
+  const isSignedIn = Boolean(session?.user);
   return (
     <html lang="en">
       <body className={inter.className}>
         <Toast>
-          <NavBar />
+          <NavBar
+            isSignedIn={isSignedIn}
+            key="GloablNavbar"
+            claims={session?.user}
+          />
           {children}
+          {isSignedIn ? signedin : signedout}
         </Toast>
       </body>
     </html>

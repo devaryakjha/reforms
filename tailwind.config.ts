@@ -8,17 +8,12 @@ const config: Config = {
     "./node_modules/flowbite-react/lib/**/*.js",
   ],
   theme: {
-    extend: {
-      colors: {
-        dark: "#2b2b2b",
-      },
-    },
+    extend: { colors: { dark: "#2b2b2b" } },
   },
   plugins: [
-    require("@tailwindcss/typography")({
-      className: "typography",
-    }),
+    require("@tailwindcss/typography")({ className: "typography" }),
     require("@tailwindcss/container-queries"),
+    require("@headlessui/tailwindcss"),
   ],
 };
 export default config;
