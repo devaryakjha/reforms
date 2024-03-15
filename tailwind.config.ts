@@ -14,7 +14,6 @@ const config: Config = {
     require("tailwindcss-animate"),
     require("@tailwindcss/typography")({ className: "typography" }),
     require("@tailwindcss/container-queries"),
-    require("@headlessui/tailwindcss"),
   ],
 };
 export default config;
