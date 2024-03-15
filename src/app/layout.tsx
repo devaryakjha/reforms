@@ -19,12 +19,8 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
-  signedout,
-  signedin,
 }: Readonly<{
   children: React.ReactNode;
-  signedout: React.ReactNode;
-  signedin: React.ReactNode;
 }>) {
   const session = await getSession();
   const isSignedIn = Boolean(session?.user);
@@ -39,7 +35,6 @@ export default async function RootLayout({
             claims={session?.user}
           />
           {children}
-          {isSignedIn ? signedin : signedout}
           <Footer />
         </Toast>
       </body>
