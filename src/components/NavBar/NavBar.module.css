@@ -1,5 +1,7 @@
 .nav {
     @apply flex h-[100px] items-center justify-between px-[50px];
+    /* Make navbar sticky */
+    @apply sticky top-0;
 }
 
 .nav > a {
