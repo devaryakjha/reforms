@@ -45,7 +45,7 @@ const features: Feature[] = [
 
 export default function Features() {
   return (
-    <div className={styles.features}>
+    <div className={styles.features} id="features">
       {features.map((feature) => (
         <div
           key={feature.title}

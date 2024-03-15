@@ -1,9 +1,9 @@
 .features {
-    @apply typography mx-auto flex min-h-[150px] max-w-7xl items-start justify-evenly gap-8 rounded-3xl bg-[#FBE4AB] py-16;
+    @apply typography mx-auto mb-16 flex min-h-[150px] max-w-7xl items-start justify-evenly gap-8 rounded-3xl bg-[#FBE4AB] px-8 py-16;
 }
 
 .feature {
-    @apply flex flex-col items-center justify-start;
+    @apply flex max-w-96 flex-1 flex-col items-center justify-start self-stretch rounded-3xl bg-white p-8;
     @apply motion-safe:fade-in motion-safe:zoom-in-50 motion-safe:fill-mode-backwards motion-safe:duration-300;
 }
 
