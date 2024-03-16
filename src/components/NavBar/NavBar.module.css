@@ -1,6 +1,6 @@
 .nav {
-    @apply bg-dark z-10 flex h-[84px] items-center justify-between px-4;
-    @apply sm:h-[100px] sm:px-[50px];
+    @apply bg-dark z-10 flex h-[64px] items-center justify-between px-4;
+    @apply sm:h-[84px] sm:px-[50px] md:h-[100px];
     /* Make navbar sticky */
     @apply sticky top-0 transition-shadow duration-300;
 }
