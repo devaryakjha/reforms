@@ -1,5 +1,6 @@
 .nav {
-    @apply bg-dark z-10 flex h-[100px] items-center justify-between px-[50px];
+    @apply bg-dark z-10 flex h-[84px] items-center justify-between px-4;
+    @apply sm:h-[100px] sm:px-[50px];
     /* Make navbar sticky */
     @apply sticky top-0 transition-shadow duration-300;
 }
@@ -13,7 +14,8 @@
 }
 
 .auth_container {
-    @apply flex items-center gap-4;
+    @apply hidden sm:flex;
+    @apply items-center gap-4;
 }
 
 .login {

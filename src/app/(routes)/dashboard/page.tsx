@@ -1,12 +1,8 @@
 import { withPageAuthRequired } from "@auth0/nextjs-auth0";
+import styles from "./Dashboard.module.css";
 
 async function Dashboard() {
-  return (
-    <main>
-      <h1>Dashboard</h1>
-      <p>Dashboard page</p>
-    </main>
-  );
+  return <main className={styles.dashboard}></main>;
 }
 
 export default withPageAuthRequired(Dashboard, { returnTo: "/dashboard" });

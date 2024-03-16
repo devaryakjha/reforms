@@ -10,6 +10,7 @@ interface Feature {
   title: string;
   description: string[];
 }
+
 const features: Feature[] = [
   {
     color: "#000000",

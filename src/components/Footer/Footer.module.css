@@ -3,19 +3,23 @@
 }
 
 .footer > hr {
-    @apply mx-16 my-0;
+    @apply mx-8 my-0 lg:mx-16;
 }
 
 .content {
-    @apply flex h-[210px] justify-between p-[50px];
+    @apply flex flex-col-reverse justify-between gap-8 p-[50px] lg:h-[210px] lg:flex-row lg:gap-0;
 }
 
 .LHS {
-    @apply flex basis-3/5 flex-col justify-between;
+    @apply flex flex-col justify-between lg:basis-3/5;
+}
+
+.logo {
+    @apply hidden lg:block;
 }
 
 .links {
-    @apply flex gap-8 text-[18px] text-white;
+    @apply flex flex-col-reverse gap-4 text-[18px] text-white lg:flex-row lg:gap-8;
 }
 
 .links > a {
@@ -23,9 +27,13 @@
 }
 
 .RHS {
-    @apply flex flex-1 items-end justify-end gap-4;
+    @apply flex flex-1 flex-col items-start justify-end gap-4 lg:flex-row lg:items-end;
+}
+
+.logo_alt {
+    @apply my-0 mb-4 lg:hidden;
 }
 
 .RHS > button {
-    @apply w-48;
+    @apply w-full md:w-48;
 }

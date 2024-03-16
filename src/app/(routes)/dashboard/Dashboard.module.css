@@ -1,0 +1,3 @@
+.dashboard {
+    @apply @container/dashboard;
+}

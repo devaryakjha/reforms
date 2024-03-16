@@ -7,7 +7,7 @@
 }
 
 .title {
-    @apply mb-0 leading-normal;
+    @apply !mb-0 leading-normal;
 }
 
 .description {

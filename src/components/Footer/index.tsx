@@ -16,6 +16,7 @@ export default function Footer() {
             src={"/logo.svg"}
             alt="Reforms Logo"
             priority
+            className={styles.logo}
           />
           <div className={styles.links}>
             <span>© {year} Reforms</span>
@@ -24,7 +25,16 @@ export default function Footer() {
             <Link href="/policies/terms-of-use">Terms of Service</Link>
           </div>
         </div>
-        <EmailForm />
+        <EmailForm>
+          <Image
+            width={100}
+            height={36}
+            src={"/logo.svg"}
+            alt="Reforms Logo"
+            priority
+            className={styles.logo_alt}
+          />
+        </EmailForm>
       </div>
     </footer>
   );
