@@ -14,7 +14,10 @@ interface NavBarProps {
 export default function NavBar(props: NavBarProps) {
   return (
     <nav className={clsx(styles.nav, "typography-base")}>
-      <Link href="/" className="not-typography">
+      <Link
+        href={props.isSignedIn ? "/dashboard" : "/about"}
+        className="not-typography"
+      >
         <Image
           width={90}
           height={36}
