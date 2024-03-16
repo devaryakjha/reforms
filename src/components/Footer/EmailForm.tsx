@@ -5,7 +5,11 @@ import { toast } from "sonner";
 import TextField from "@/ui/TextField";
 import Button from "@/ui/Button";
 
-export default function EmailForm() {
+interface EmailFormProps {
+  children?: React.ReactNode;
+}
+
+export default function EmailForm(props: EmailFormProps) {
   return (
     <form
       className={styles.RHS}
@@ -30,6 +34,7 @@ export default function EmailForm() {
         }
       }}
     >
+      {props.children}
       <TextField
         label="Updates right to your Inbox"
         placeholder="Email Address"
