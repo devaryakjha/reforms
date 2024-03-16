@@ -13,6 +13,14 @@
     @apply flex items-center justify-center p-4 text-white;
 }
 
+.auth_container_mobile {
+    @apply flex sm:hidden;
+}
+
+.signInBtn {
+    @apply h-[30px] w-[30px];
+}
+
 .auth_container {
     @apply hidden sm:flex;
     @apply items-center gap-4;

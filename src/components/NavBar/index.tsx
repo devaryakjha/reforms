@@ -5,6 +5,7 @@ import Button from "@/ui/Button";
 import Userdropdown from "./UserDropDown";
 import type { Claims } from "@auth0/nextjs-auth0";
 import clsx from "clsx";
+import Login from "@heroicons/react/20/solid/ArrowRightStartOnRectangleIcon";
 
 interface NavBarProps {
   isSignedIn: boolean;
@@ -26,6 +27,16 @@ export default function NavBar(props: NavBarProps) {
           priority
         />
       </Link>
+      <div className={styles.auth_container_mobile}>
+        {props.isSignedIn && <Userdropdown claims={props.claims} />}
+        {!props.isSignedIn && (
+          <Link href="/api/auth/login" prefetch={false}>
+            <Button rounded variant="icon">
+              <Login className={styles.signInBtn} />
+            </Button>
+          </Link>
+        )}
+      </div>
       <div className={styles.auth_container}>
         {props.isSignedIn && <Userdropdown claims={props.claims} />}
         {!props.isSignedIn && (

@@ -22,8 +22,8 @@
     @apply px-6 py-3.5 text-base;
 }
 
-.text:hover {
-    @apply bg-[#a6adbb33];
+.text {
+    @apply hover:bg-[#a6adbb33];
 }
 
 .primary {
@@ -32,4 +32,12 @@
 
 .secondary {
     @apply w-56 bg-[#F8D57E] text-[#333333] hover:bg-[#F8D57E90];
+}
+
+.icon {
+    @apply flex h-16 w-16 items-center justify-center hover:bg-[#a6adbb33];
+}
+
+.rounded {
+    @apply rounded-full;
 }

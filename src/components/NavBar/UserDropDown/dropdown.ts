@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRightStartOnRectangleIcon } from "@heroicons/react/20/solid";
+import Logout from "@heroicons/react/20/solid/ArrowLeftStartOnRectangleIcon";
 
 type DropdownType = "link" | "button";
 
@@ -26,7 +26,7 @@ const dropdownoptions: DropdownOptions = [
     id: "profile",
     items: [
       {
-        icon: ArrowRightStartOnRectangleIcon,
+        icon: Logout,
         type: "link",
         title: "Logout",
         url: "/api/auth/logout",

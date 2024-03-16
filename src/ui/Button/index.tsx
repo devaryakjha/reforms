@@ -16,11 +16,16 @@ const buttonStyles = cva(styles.base, {
       text: styles.text,
       primary: styles.primary,
       secondary: styles.secondary,
+      icon: styles.icon,
+    },
+    rounded: {
+      true: styles.rounded,
     },
   },
   defaultVariants: {
     size: "base",
     variant: "text",
+    rounded: false,
   },
 });
 
@@ -33,8 +38,13 @@ interface ButtonProps
 }
 
 const Button = memo<ButtonProps>(
-  ({ children, className, size, variant, ...rest }) => {
-    const calculatedClassName = buttonStyles({ className, size, variant });
+  ({ children, className, size, variant, rounded, ...rest }) => {
+    const calculatedClassName = buttonStyles({
+      className,
+      size,
+      variant,
+      rounded,
+    });
     return (
       <button className={calculatedClassName} {...rest}>
         {children}
