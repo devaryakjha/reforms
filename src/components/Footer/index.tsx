@@ -25,7 +25,7 @@ export default function Footer() {
             <Link href="/policies/terms-of-use">Terms of Service</Link>
           </div>
         </div>
-        <EmailForm>
+        <EmailForm key={"email_form"}>
           <Image
             width={100}
             height={36}

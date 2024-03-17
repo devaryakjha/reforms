@@ -1,12 +1,10 @@
 import Link from "next/link";
 import styles from "./NavBar.module.css";
 import Image from "next/image";
-import Button from "@/ui/Button";
-import Userdropdown from "./UserDropDown";
 import type { Claims } from "@auth0/nextjs-auth0";
 import clsx from "clsx";
-import Login from "@heroicons/react/20/solid/ArrowRightStartOnRectangleIcon";
-
+import AuthSection from "./AuthSection";
+import { MobileLinks, DesktopLinks } from "./SignedInLinks";
 interface NavBarProps {
   isSignedIn: boolean;
   claims?: Claims;
@@ -27,31 +25,12 @@ export default function NavBar(props: NavBarProps) {
           priority
         />
       </Link>
-      <div className={styles.auth_container_mobile}>
-        {props.isSignedIn && <Userdropdown claims={props.claims} />}
-        {!props.isSignedIn && (
-          <Link href="/api/auth/login" prefetch={false}>
-            <Button rounded variant="icon">
-              <Login className={styles.signInBtn} />
-            </Button>
-          </Link>
-        )}
-      </div>
-      <div className={styles.auth_container}>
-        {props.isSignedIn && <Userdropdown claims={props.claims} />}
-        {!props.isSignedIn && (
-          <>
-            <Link href="/api/auth/signup" prefetch={false}>
-              <Button size="lg">Sign up</Button>
-            </Link>
-            <Link href="/api/auth/login" prefetch={false}>
-              <Button size="lg" variant="primary" className={styles.login}>
-                Log in
-              </Button>
-            </Link>
-          </>
-        )}
-      </div>
+      <AuthSection
+        {...props}
+        key={"AuthSection"}
+        mobileLinks={<MobileLinks />}
+        desktopLinks={<DesktopLinks />}
+      />
     </nav>
   );
 }

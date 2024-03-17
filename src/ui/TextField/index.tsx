@@ -18,6 +18,7 @@ export default function TextField(props: TextFieldProps) {
         id={props.name}
         name={props.name}
         placeholder={props.placeholder}
+        required
       />
     </div>
   );
