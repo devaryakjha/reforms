@@ -5,6 +5,7 @@ import type { Claims } from "@auth0/nextjs-auth0";
 import clsx from "clsx";
 import AuthSection from "./AuthSection";
 import { MobileLinks, DesktopLinks } from "./SignedInLinks";
+import Userdropdown from "./UserDropDown";
 interface NavBarProps {
   isSignedIn: boolean;
   claims?: Claims;
@@ -30,6 +31,7 @@ export default function NavBar(props: NavBarProps) {
         key={"AuthSection"}
         mobileLinks={<MobileLinks />}
         desktopLinks={<DesktopLinks />}
+        userDropdown={<Userdropdown claims={props.claims} />}
       />
     </nav>
   );

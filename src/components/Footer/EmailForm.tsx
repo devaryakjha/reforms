@@ -5,6 +5,8 @@ import TextField from "@/ui/TextField";
 import Button from "@/ui/Button";
 import { useFormState, useFormStatus } from "react-dom";
 import { SubmitEmailResponse } from "@/app/actions/type";
+import { useEffect } from "react";
+import { toast } from "sonner";
 
 interface EmailFormProps {
   children?: React.ReactNode;
@@ -27,6 +29,24 @@ function SubmitButton() {
 
 export default function EmailForm(props: EmailFormProps) {
   const [state, formAction] = useFormState(submitEmail, initialFormState);
+  useEffect(() => {
+    switch (state?.response) {
+      case "success":
+        toast.success("Thank you for subscribing");
+        break;
+      case "already_registered":
+        toast.info("You are already subscribed");
+        break;
+      case "invalid_email":
+        toast.error("Invalid email address");
+        break;
+      case "error":
+        toast.error("An error occurred, please try again");
+        break;
+      default:
+        break;
+    }
+  }, [state]);
   return (
     <form className={styles.RHS} action={formAction}>
       {props.children}
@@ -35,6 +55,8 @@ export default function EmailForm(props: EmailFormProps) {
         placeholder="Email Address"
         name="email"
         key="email"
+        type="email"
+        required
       />
       <p aria-live="polite" className="sr-only" role="status">
         {state?.response}

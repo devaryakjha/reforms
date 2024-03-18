@@ -1,24 +1,23 @@
 import styles from "./TextField.module.css";
 
-interface TextFieldProps {
+interface TextFieldProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label: string;
   placeholder: string;
   name: string;
 }
 
-export default function TextField(props: TextFieldProps) {
+export default function TextField({ name, label, ...props }: TextFieldProps) {
   return (
     <div className={styles.container}>
-      <label className={styles.label} htmlFor={props.name}>
-        {props.label}
+      <label className={styles.label} htmlFor={name}>
+        {label}
       </label>
       <input
         className={styles.filledinput}
         type="text"
-        id={props.name}
-        name={props.name}
-        placeholder={props.placeholder}
-        required
+        id={name}
+        name={name}
+        {...props}
       />
     </div>
   );
