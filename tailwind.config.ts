@@ -8,7 +8,7 @@ const config: Config = {
     "./node_modules/flowbite-react/lib/**/*.js",
   ],
   theme: {
-    extend: { colors: { dark: "#2b2b2b" } },
+    extend: { colors: { dark: "#2b2b2b", "section-dark": "#343434" } },
   },
   plugins: [
     require("tailwindcss-animate"),

@@ -1,31 +1,31 @@
 .nav {
-    @apply bg-dark z-10 flex h-[64px] items-center justify-between px-4;
-    @apply sm:h-[84px] sm:px-[50px] md:h-[100px];
-    /* Make navbar sticky */
-    @apply sticky top-0 transition-shadow duration-300;
+  @apply bg-dark z-10 flex h-[64px] items-center justify-between px-4;
+  @apply sm:h-[84px] sm:px-[50px];
+  /* Make navbar sticky */
+  @apply sticky top-0 transition-shadow duration-300;
 }
 
 .navscrolled {
-    @apply drop-shadow-lg;
+  @apply drop-shadow-lg;
 }
 
 .nav > a {
-    @apply flex items-center justify-center p-4 text-white;
+  @apply flex items-center justify-center p-4 text-white;
 }
 
 .auth_container_mobile {
-    @apply flex sm:hidden;
+  @apply flex sm:hidden;
 }
 
 .signInBtn {
-    @apply h-[30px] w-[30px];
+  @apply h-[30px] w-[30px];
 }
 
 .auth_container {
-    @apply hidden sm:flex;
-    @apply items-center gap-4;
+  @apply hidden sm:flex;
+  @apply items-center gap-4;
 }
 
 .login {
-    @apply w-32;
+  @apply w-32;
 }
